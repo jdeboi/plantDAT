@@ -1,10 +1,13 @@
 extends layout
 
 block content
-  h1 Plant me!
-
-
-  form(onsubmit="location.href='/plant/' + document.getElementById('plantCodeBox').value; return false;")
-    div.form-group
-      input(type="text" class="form-control" id="plantCodeBox" placeholder="Plant Code")
-    button(type="submit" class="btn btn-primary") Submit
+  div.imgtile
+    img(src="images/og.jpg")
+  div.jumbotron
+    div.row
+      div.col-lg.text-center
+        h1 Plant dat!
+        p Avert flooding by spawning a native plant in the Lucky Hotel!
+        a(href="/spawn")
+          button(type="submit" class="btn btn-success") Plant!
+  p Want to get more involved? <a href="/plot">Claim a plot!</a> 

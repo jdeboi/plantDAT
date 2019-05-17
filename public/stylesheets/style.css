@@ -2,6 +2,27 @@ body {
   padding-top: 80px;
 }
 
+.jumbotron {
+  background: rgb(233,	236,	239); /* This is for ie8 and below */
+  background: rgba(233,	236,	239, 0.5);
+}
+
+.imgtile {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+.imgtile img {
+  position: absolute;
+  z-index: -100;
+  width: 100%;
+  height: auto;
+  opacity: 0.05;
+}
+
 #plantCodeBox {
   width: 160px;
 }
