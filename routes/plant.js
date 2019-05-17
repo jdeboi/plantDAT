@@ -29,7 +29,7 @@ router.get('/:id', function(req, res, next) {
         });
       }
       else {
-        res.render('notfound', {});
+        res.render('notfound', {error: "no such plant"});
       }
     }
   });
