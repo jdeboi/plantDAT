@@ -1,14 +1,19 @@
 {
-  "name": "gigaplant",
-  "version": "0.0.0",
-  "private": true,
+  "name": "plantDat",
+  "version": "0.3.0",
+  "description": "Promoting indigenous plants, pavement removal, and green infrastructure for sustainable water management in New Orleans",
+  "engines": {
+    "node": "10.x"
+  },
+  "main": "app.js",
   "scripts": {
-    "start": "nodemon ./bin/www"
+    "start": "nodemon ./bin/www",
+    "test": "node test.js"
   },
   "dependencies": {
+    "express": "^4.15.2",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
-    "express": "~4.16.1",
     "http-errors": "~1.6.3",
     "moment": "^2.24.0",
     "mongoose": "^5.5.7",
@@ -16,5 +21,22 @@
     "nodemon": "^1.19.0",
     "pug": "2.0.0-beta11",
     "socket.io": "^2.2.0"
-  }
+  },
+  "devDependencies": {
+    "request": "^2.81.0",
+    "tape": "^4.7.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jdeboi/plantDAT"
+  },
+  "keywords": [
+    "node",
+    "indigenous",
+    "native",
+    "NOLA",
+    "New Orleans",
+    "water management"
+  ],
+  "license": "MIT"
 }
