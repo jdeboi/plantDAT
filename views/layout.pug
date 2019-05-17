@@ -3,6 +3,7 @@ html
   head
     - var app_title = "Plant Dat"
     - var app_description = "Indigenous plants for water management"
+    - var app_twitter = "@spong_city_nola"
       
     // metadata
     title #{app_title}
@@ -14,13 +15,13 @@ html
     
     // opengraph 
     meta(property="og:title" content=app_title)
-    meta(property="og:image" content="http://paintingthecave.com/img/caveog.png")
-    meta(property="og:site_name" content="The Cave")
-    meta(property="og:description" content="An interactive, projection-mapped installation that explores the dawn of art created by artificial intelligence")
+    meta(property="og:image" content="../images/og.jpg")
+    meta(property="og:site_name" content=app_title)
+    meta(property="og:description" content=app_description)
 
     // twitter
     meta(name="twitter:card", content="summary_large_image")
-    meta(name="twitter:site", content="@sponge_city_nola")
+    meta(name="twitter:site", content=app_twitter)
     meta(name="twitter:title", content=app_title)
     meta(name="twitter:description", content=app_description)
 
