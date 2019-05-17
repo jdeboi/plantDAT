@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1 Plant me!
+
+
+  form(onsubmit="location.href='/plant/' + document.getElementById('plantCodeBox').value; return false;")
+    div.form-group
+      input(type="text" class="form-control" id="plantCodeBox" placeholder="Plant Code")
+    button(type="submit" class="btn btn-primary") Submit
