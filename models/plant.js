@@ -24,29 +24,29 @@ var plantSchema = new mongoose.Schema({
 
 }, { collection : 'plants' });
 
-var Plant = mongoose.model('Plant', plantSchema);
+plantSchema.statics.create = function (type, callback) {
+  let num = Plant.count((err, count) => {
+    if (err) throw err;
+    var plant = new Plant({
+      x: 0.5,
+      y: 0.5,
+      color: getRandomColor(),
+      plantType: type,
+      created_at: new Date(),
+      height: 0,
+      spawned: true,
+      code: count,
+      health: 1.0,
+      growthRate: 1.0,
+      waterStored: 0,
+      sunlight: 0.5,
+      water: 0.5,
+      drainage: 0.5,
 
-Plant.methods.create = function create(type, callback) {
-  let num = await Plant.count();
-  var plant = new Plant({
-    x: 0.5,
-    y: 0.5,
-    color: getRandomColor(),
-    plantType: type,
-    created_at: new Date(),
-    height: 0,
-    spawned: true,
-
-    code: num,
-    health: 1.0,
-    growthRate: 1.0,
-    waterStored: 0,
-    sunlight: 0.5,
-    water: 0.5,
-    drainage: 0.5,
-
+    });
+    plant.save(callback);
   });
-  plant.save(callback);
+
 }
 
 function getRandomColor() {
@@ -54,5 +54,7 @@ function getRandomColor() {
   let index = Math.floor(Math.random()*colors.length);
   return colors[index];
 }
+
+var Plant = mongoose.model('Plant', plantSchema);
 
 module.exports = Plant;

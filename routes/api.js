@@ -15,7 +15,7 @@ router.post('/spawn/:plantType', function(req, res, next) {
     if (err) throw err;
     res.render('index', { title: 'Home' });
   });
-
+});
 
 
 router.get('/allspawned', function(req, res, next) {

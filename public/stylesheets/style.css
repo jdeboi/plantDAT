@@ -50,6 +50,7 @@ body {
   width: 100%;
   max-width: 800px;
   height: 100%;
+
 }
 
 .swiper-wrapper {
@@ -59,6 +60,7 @@ body {
 .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
   top: 0px;
   bottom: auto;
+  z-index: -1;
 }
 
 
@@ -102,6 +104,10 @@ button.spawn {
 }
 #content-wrap {
   padding-bottom: 300px;    /* Footer height */
+}
+
+button {
+  z-index: 1000;
 }
 
 footer {
