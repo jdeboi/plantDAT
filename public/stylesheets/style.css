@@ -1,10 +1,11 @@
 html {
-  min-height: 100%;
+  height:100%;
 }
 
 body {
+  position:relative;
   padding-top: 70px;
-  min-height: 100vh;
+  min-height: 100%;
 }
 
 .plantColor {
@@ -47,6 +48,7 @@ body {
 
 .swiper-container {
   width: 100%;
+  max-width: 800px;
   height: 100%;
 }
 
@@ -94,9 +96,28 @@ button.spawn {
   background-position : center center;
 }
 
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+#content-wrap {
+  padding-bottom: 300px;    /* Footer height */
+}
+
 footer {
-  margin-top: 30px;
+  /* margin-top: 30px; */
   color:white;
-  padding:10px;
+   padding:10px;
   padding-bottom:20px;
+
+  /* height: 2.5rem; */
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+              /* Footer height */
+}
+
+.socials {
+  font-size: 50px;
+  color: white;
 }

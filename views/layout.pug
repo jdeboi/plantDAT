@@ -35,18 +35,22 @@ html
   body
     include navbar.pug
     
-    div.container
-      block content
+    div.container#page-container
+      div#content-wrap
+        block content
 
     
       
     footer.page-footer.font-small.plantColor.pt-4
-      div.container-fluid.text-center.text-md-left
+      div.container-fluid
         div.row
-          div.col-md-6.mt-md-0.mt-3
-            h5 Mission Statement
+          div.col-md-6.mt-md-0.mt-3.text-center.text-md-left
+            h5 Mission
             hr
             p Plant Dat seeks to promote indigenous plants, pavement removal, and green infrastructure for sustainable water management in New Orleans.
+          div.col-md-6.mt-md-0.mt-3.text-center
+            a(href="https://www.instagram.com/sponge_city_nola/") 
+              i(class="fa fa-instagram socials" aria-hidden="true")
     // scripts
     script(src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous")
     script(src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js")
