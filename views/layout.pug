@@ -7,9 +7,8 @@ html
       
     // metadata
     title #{app_title}
-    meta(name='viewport', charset="utf-8")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
-    meta(name="viewport", content="width=device-width, initial-scale=1")
+    meta(name="viewport" charset="utf-8" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1")
     meta(name="description", content=app_description)
     meta(name="author", content="Jenna deBoisblanc")
     
@@ -30,21 +29,29 @@ html
     link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous")
     link(rel="stylesheet" href="/stylesheets/style.css")
     
+    // swiper stylesheets
+    link(rel="stylesheet" href="/stylesheets/swiper.min.css")
+
   body
     include navbar.pug
     
     div.container
       block content
 
+    
+      
+    footer.page-footer.font-small.plantColor.pt-4
+      div.container-fluid.text-center.text-md-left
+        div.row
+          div.col-md-6.mt-md-0.mt-3
+            h5 Mission Statement
+            hr
+            p Plant Dat seeks to promote indigenous plants, pavement removal, and green infrastructure for sustainable water management in New Orleans.
     // scripts
     script(src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous")
     script(src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js")
     script(src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js")
-    script(src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous")
     script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js")
     script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js")
     
     block customScripts
-      
-  footer
-    div(style="padding-bottom:50px")

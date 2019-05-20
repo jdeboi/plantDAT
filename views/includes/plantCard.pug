@@ -1,0 +1,18 @@
+mixin plantCard(name, latin, bio, img)
+  div.card.top-buffer
+    div.card-header 
+      h2=name  
+      h5.latin=latin
+    div.card-body
+      div.row
+        div.col.text-center
+          button.btn.spawn Plant me!
+      div.row.top-buffer
+        div.col-lg-6.mb-3
+          div.slideIcon
+            img(src=img)
+        div.col-lg-6.mb-3
+          div.card
+            div.card-header
+              h5.mb-0 Bio
+            div.card-body=bio
