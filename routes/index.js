@@ -14,8 +14,6 @@ router.get('/about', function(req, res, next) {
   res.render('about', { title: 'About' });
 });
 
-router.get('/spawn', function(req, res, next) {
-  res.render('spawn', { title: 'Spawn' });
-});
+
 
 module.exports = router;

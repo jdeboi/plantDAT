@@ -2,10 +2,10 @@ var express = require('express');
 var router = express.Router();
 var moment = require('moment');
 var Plant = require('../models/plant')
-var plantTypeJson = require('../public/json/plantTypes');
+var plantTypeJson = require('../public/json/plantTypes.json');
 
 router.get('/spawn', function(req, res, next) {
-  res.render('spawn', { title: 'Spawn' });
+  res.render('spawn', { title: 'Spawn', plantTypes: plantTypeJson });
 });
 
 router.post('/spawn/:plantType', function(req, res, next) {

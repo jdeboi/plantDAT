@@ -1,21 +1,22 @@
-mixin plantCard(name, latin, bio, img)
+mixin plantCard(plantType)
   div.card.top-buffer
     div.card-header 
-      h2=name  
-      h5.latin=latin
+      h2=plantType.name  
+      h5.latin=plantType.latin_name
     div.card-body
       div.row
         div.col.text-center
-          -var url="/api/spawn/"+name;
+          -var url="/api/spawn/"+plantType.name;
           form(action=url method="post")
             button.btn.spawn(type="submit" formmethod="post") Plant me!
             
       div.row.top-buffer
         div.col-lg-6.mb-3
           div.slideIcon
-            img(src=img)
+            -var imgsrc = "../images/icons/" + plantType.img_path;
+            img(src=imgsrc)
         div.col-lg-6.mb-3
           div.card
             div.card-header
               h5.mb-0 Bio
-            div.card-body=bio
+            div.card-body=plantType.bio

@@ -4,36 +4,33 @@ block content
   include includes/plantCard.pug
   div.swiper-container
     div.swiper-wrapper
-      div.swiper-slide 
-        -var name="Beauty Berry"
-        -var latin="sargasas whateverus"
-        -var bio="Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch."
-        -var img="../images/icons/beauty.png";
-        +plantCard(name, latin, bio, img)
-      div.swiper-slide 
-        -name="Clasping Cone Flower"
-        -latin="sargasas whateverus"
-        -bio="Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch."
-        -img="../images/icons/clasping.png";
-        +plantCard(name, latin, bio, img)
-      div.swiper-slide 
-        -name="Lizard's Tail"
-        -latin="sargasas whateverus"
-        -bio="Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch."
-        -img="../images/icons/lizard.png";
-        +plantCard(name, latin, bio, img)
-      div.swiper-slide 
-        -name="Stokes Aster"
-        -latin="sargasas whateverus"
-        -bio="Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch."
-        -img="../images/icons/stokes.png";
-        +plantCard(name, latin, bio, img)
-      div.swiper-slide 
-        -name="Obedient Plant"
-        -latin="sargasas whateverus"
-        -bio="Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch."
-        -img="../images/icons/obedient.png";
-        +plantCard(name, latin, bio, img)
+      for plant in plantTypes
+        div.swiper-slide 
+          +plantCard(plant)
+      //- div.swiper-slide 
+      //-   -name="Clasping Cone Flower"
+      //-   -latin="sargasas whateverus"
+      //-   -bio="Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch."
+      //-   -img="../images/icons/clasping.png";
+      //-   +plantCard(name, latin, bio, img)
+      //- div.swiper-slide 
+      //-   -name="Lizard's Tail"
+      //-   -latin="sargasas whateverus"
+      //-   -bio="Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch."
+      //-   -img="../images/icons/lizard.png";
+      //-   +plantCard(name, latin, bio, img)
+      //- div.swiper-slide 
+      //-   -name="Stokes Aster"
+      //-   -latin="sargasas whateverus"
+      //-   -bio="Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch."
+      //-   -img="../images/icons/stokes.png";
+      //-   +plantCard(name, latin, bio, img)
+      //- div.swiper-slide 
+      //-   -name="Obedient Plant"
+      //-   -latin="sargasas whateverus"
+      //-   -bio="Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch."
+      //-   -img="../images/icons/obedient.png";
+      //-   +plantCard(name, latin, bio, img)
     div.swiper-pagination
 
 

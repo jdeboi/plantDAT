@@ -1,14 +1,32 @@
-{
-  "sweet berry": {
-    "latin_name": "sargasus whateverus",
-    "bio": "here are some amazing things about this plant. here's how it grows. what its flowers look like. how to care for it? special powers. other things of note. I dunno how many words are we trying to go for here stream of conciousness.",
-    "img_path": "plantImg.png"
-
-  },
-
-  "firey bush": {
+[
+  {
+    "name": "Beauty Berry",
     "latin_name": "lolygagus hoopydoodadus",
     "bio": "here are some amazing things about this plant. here's how it grows. what its flowers look like. how to care for it? special powers. other things of note. I dunno how many words are we trying to go for here stream of conciousness.",
-    "img_path": "plantImg2.png"
+    "img_path": "beauty.png"
+  },
+  {
+    "name": "Clasping Cone Flower",
+    "latin_name": "sargasus whateverus",
+    "bio": "here are some amazing things about this plant. here's how it grows. what its flowers look like. how to care for it? special powers. other things of note. I dunno how many words are we trying to go for here stream of conciousness.",
+    "img_path": "clasping.png"
+  },
+  {
+    "name": "Lizard's Tail",
+    "latin_name": "lolygagus hoopydoodadus",
+    "bio": "here are some amazing things about this plant. here's how it grows. what its flowers look like. how to care for it? special powers. other things of note. I dunno how many words are we trying to go for here stream of conciousness.",
+    "img_path": "lizard.png"
+  },
+  {
+    "name": "Obedient Plant",
+    "latin_name": "lolygagus hoopydoodadus",
+    "bio": "here are some amazing things about this plant. here's how it grows. what its flowers look like. how to care for it? special powers. other things of note. I dunno how many words are we trying to go for here stream of conciousness.",
+    "img_path": "obedient.png"
+  },
+  {
+    "name": "Stokes Aster",
+    "latin_name": "lolygagus hoopydoodadus",
+    "bio": "here are some amazing things about this plant. here's how it grows. what its flowers look like. how to care for it? special powers. other things of note. I dunno how many words are we trying to go for here stream of conciousness.",
+    "img_path": "stokes.png"
   }
-}
+]
