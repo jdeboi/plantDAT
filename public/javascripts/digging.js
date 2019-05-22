@@ -24,7 +24,7 @@ function setup() {
     alert("So sorry! Websocket is supported by your Browser!");
   }
   else {
-    ws = new WebSocket("ws://localhost:8025/john");
+    ws = new WebSocket("ws://184.189.154.10:8025/digging");
 
     ws.onopen = function() {
       // Web Socket is connected, send data using send()
