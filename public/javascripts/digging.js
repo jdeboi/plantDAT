@@ -24,7 +24,13 @@ function setup() {
     alert("So sorry! Websocket is supported by your Browser!");
   }
   else {
-    ws = new WebSocket("ws://184.189.154.10:8025/digging");
+    // get this number in preferences > network > advanced > TCIP > ipv4 address
+    // also in ifconfig en0 inet
+    // NOT from google "what is my ip address" (184.189.154.10)
+    // NOT from other website that claims "here's your external ip"
+    ws = new WebSocket("ws://172.17.15.216:8025/");
+
+
 
     ws.onopen = function() {
       // Web Socket is connected, send data using send()
