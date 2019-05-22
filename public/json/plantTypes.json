@@ -1,30 +1,35 @@
 [
   {
     "name": "Beauty Berry",
+    "short_name": "beauty",
     "latin_name": "lolygagus hoopydoodadus",
     "bio": "here are some amazing things about this plant. here's how it grows. what its flowers look like. how to care for it? special powers. other things of note. I dunno how many words are we trying to go for here stream of conciousness.",
     "img_path": "beauty.png"
   },
   {
     "name": "Clasping Cone Flower",
+    "short_name": "clasping",
     "latin_name": "sargasus whateverus",
     "bio": "here are some amazing things about this plant. here's how it grows. what its flowers look like. how to care for it? special powers. other things of note. I dunno how many words are we trying to go for here stream of conciousness.",
     "img_path": "clasping.png"
   },
   {
     "name": "Lizard's Tail",
+    "short_name": "lizard",
     "latin_name": "lolygagus hoopydoodadus",
     "bio": "here are some amazing things about this plant. here's how it grows. what its flowers look like. how to care for it? special powers. other things of note. I dunno how many words are we trying to go for here stream of conciousness.",
     "img_path": "lizard.png"
   },
   {
     "name": "Obedient Plant",
+    "short_name": "obedient",
     "latin_name": "lolygagus hoopydoodadus",
     "bio": "here are some amazing things about this plant. here's how it grows. what its flowers look like. how to care for it? special powers. other things of note. I dunno how many words are we trying to go for here stream of conciousness.",
     "img_path": "obedient.png"
   },
   {
     "name": "Stokes Aster",
+    "short_name": "stokes",
     "latin_name": "lolygagus hoopydoodadus",
     "bio": "here are some amazing things about this plant. here's how it grows. what its flowers look like. how to care for it? special powers. other things of note. I dunno how many words are we trying to go for here stream of conciousness.",
     "img_path": "stokes.png"

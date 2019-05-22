@@ -22,7 +22,8 @@
     "nodemon": "^1.19.0",
     "pug": "2.0.0-beta11",
     "socket.io": "^2.2.0",
-    "swiper": "^4.5.0"
+    "swiper": "^4.5.0",
+    "ws": "^7.0.0"
   },
   "devDependencies": {
     "request": "^2.81.0",
@@ -40,5 +41,9 @@
     "New Orleans",
     "water management"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "optionalDependencies": {
+    "bufferutil": "^4.0.1",
+    "utf-8-validate": "^5.0.2"
+  }
 }

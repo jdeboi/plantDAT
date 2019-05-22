@@ -6,10 +6,9 @@ mixin plantCard(plantType)
     div.card-body
       div.row
         div.col.text-center
-          -var url="/api/spawn/"+plantType.name;
-          form(action=url method="post")
-            button.btn.spawn(type="submit" formmethod="post") Plant me!
-            
+          -var link = "/api/dig/" + plantType.short_name  
+          a(href=link)
+            button.btn.spawn Plant me!
       div.row.top-buffer
         div.col-lg-6.mb-3
           div.slideIcon

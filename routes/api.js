@@ -4,16 +4,38 @@ var moment = require('moment');
 var Plant = require('../models/plant')
 var plantTypeJson = require('../public/json/plantTypes.json');
 
-router.get('/spawn', function(req, res, next) {
-  res.render('spawn', { title: 'Spawn', plantTypes: plantTypeJson });
+router.get('/plants', function(req, res, next) {
+  res.render('plants', { title: 'Plants', plantTypes: plantTypeJson });
 });
 
-router.post('/spawn/:plantType', function(req, res, next) {
-  var plantType = req.params.plantType;
-  console.log("spawn new plant type: " + plantType);
-  Plant.create(plantType, (err) => {
+router.get('/dig/beauty', function(req, res, next) {
+  res.render('digging', { title: 'Dig', plantType: plantTypeJson[0] });
+});
+
+router.get('/dig/clasping', function(req, res, next) {
+  res.render('digging', { title: 'Dig', plantType: plantTypeJson[1] });
+});
+
+router.get('/dig/lizard', function(req, res, next) {
+  res.render('digging', { title: 'Dig', plantType: plantTypeJson[2] });
+});
+
+router.get('/dig/obedient', function(req, res, next) {
+  res.render('digging', { title: 'Dig', plantType: plantTypeJson[3]  });
+});
+
+router.get('/dig/stokes', function(req, res, next) {
+  res.render('digging', { title: 'Dig', plantType: plantTypeJson[4]  });
+});
+
+router.post('/spawn', function(req, res, next) {
+  var plant = req.body;
+  console.log("spawn new plant type: " + plant.short_name, plant.x, plant.y);
+
+  Plant.create(plant, (err) => {
     if (err) throw err;
-    res.render('index', { title: 'Home' });
+    console.log(plant.short_name, "planted!");
+    res.json({});
   });
 });
 
