@@ -86,8 +86,9 @@ function touchStarted() {
   if (inBounds()) {
     setXY();
     sendXY();
+    return false;
   }
-  return false;
+
 }
 
 function touchMoved() {
@@ -96,8 +97,9 @@ function touchMoved() {
       setXY();
       sendXY();
     }
+    return false;
   }
-  return false;
+
 }
 
 function inBounds() {
@@ -108,8 +110,9 @@ function touchEnded() {
   if (inBounds()) {
     setXY();
     sendXY();
+    return false;
   }
-  return false;
+
 }
 
 function sendXY() {
