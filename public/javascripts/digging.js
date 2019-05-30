@@ -1,10 +1,11 @@
+let ip = "192.168.1.100";
 let ws;
-var x = 0, y = 0, sendx = 50, sendy = 50;
+var x = 0, y = 0, sendx, sendy;
 let canvas;
 let shovelImg;
 let arrow;
 let div;
-let plantName;
+let plantName = "";
 
 function preload() {
   shovelImg = loadImage("../../images/shovel.png");
@@ -28,24 +29,7 @@ function setup() {
     // also in ifconfig en0 inet
     // NOT from google "what is my ip address" (184.189.154.10)
     // NOT from other website that claims "here's your external ip"
-    ws = new WebSocket("ws://172.17.15.216:8025/");
-
-
-
-    ws.onopen = function() {
-      // Web Socket is connected, send data using send()
-      let s = "Opening Connection";
-      ws.send(s);
-      // alert("Message is sent...");
-    };
-    ws.onmessage = function (evt) {
-      var received_msg = evt.data;
-      // alert("Message is received...");
-    };
-    ws.onclose = function() {
-      // websocket is closed.
-      // alert("Connection is closed...");
-    };
+    createWebsocket();
   }
 }
 
@@ -118,7 +102,7 @@ function touchEnded() {
 function sendXY() {
   if (inBounds()) {
     let s = "T" + plantName + "X" + sendx + "Y" + sendy;
-    ws.send(s)
+    if (ws.readyState === WebSocket.OPEN) ws.send(s);
   }
 }
 
@@ -141,17 +125,28 @@ function spawn() {
     'x': sendx,
     'y': sendy
   };
-  // let postData = {
-  //   'headers' : {
-  //     'Content-Type': 'application/json',
-  //     'Accept': 'application/json'
-  //   },
-  //   'short_name': plantName,
-  //   'x': sendx,
-  //   'y': sendy
-  // };
-
 
   httpPost(url, postData,()=> { console.log("win?"); window.location.href = "/thanks"   }, ()=> { console.log(" didn't worked")});
 
+}
+
+function createWebsocket() {
+
+  ws = new WebSocket("ws://" + ip +":8025/"); //172.17.15.216:8025/");
+
+  ws.onopen = function() {
+    // Web Socket is connected, send data using send()
+    let s = "Opening Connection";
+    ws.send(s);
+    // alert("Message is sent...");
+  };
+  ws.onmessage = function (evt) {
+    var received_msg = evt.data;
+    // alert("Message is received...");
+  };
+  ws.onclose = function() {
+    // websocket is closed.
+    // alert("Connection is closed...");
+    setTimeout(function(){createWebsocket()}, 5000);
+  };
 }
