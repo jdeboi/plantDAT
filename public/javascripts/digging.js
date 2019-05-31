@@ -138,13 +138,13 @@ function setXY() {
 
 function spawn() {
 
-  let url="http://plantdat.com/api/spawn";
+  let url="../spawn";
   let postData = {
     'short_name': plantName,
     'x': sendx,
     'y': sendy
   };
-
+  console.log(url);
   httpPost(url, postData,()=> { console.log("win?"); window.location.href = "/thanks"   }, ()=> { console.log(" didn't worked")});
 
 }
