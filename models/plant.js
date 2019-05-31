@@ -43,6 +43,7 @@ plantSchema.statics.create = function (plant, callback) {
   }
   let num = Plant.count((err, count) => {
     if (err) throw err;
+    console.log("xy", plant);
     var newplant = new Plant({
       x: plant.x,
       y: plant.y,

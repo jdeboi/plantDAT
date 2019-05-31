@@ -22,6 +22,8 @@ function setup() {
   shovelC = floor(random(100));
   x = width/2;
   y = height/2;
+  sendx = 50;
+  sendy = 50;
   if (!"WebSocket" in window) {
     // The browser doesn't support WebSocket
     alert("So sorry! Websocket is supported by your Browser!");
