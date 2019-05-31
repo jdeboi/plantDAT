@@ -27,7 +27,7 @@ var plantSchema = new mongoose.Schema({
 plantSchema.statics.create = function (plant, callback) {
   let name = "";
   if (plant.short_name == "beauty") {
-    name = "Beauty Berry";
+    name = "America Beautyberry";
   }
   else if (plant.short_name == "clasping") {
     name = "Clasping Cone Flower";
@@ -36,28 +36,28 @@ plantSchema.statics.create = function (plant, callback) {
     name = "Stokes Aster";
   }
   else if (plant.short_name == "lizard") {
-    name = "Clasping Cone Flower";
+    name = "Lizard's Tail";
   }
   else if (plant.short_name == "obedient") {
-    name = "Obedient Plant";
+    name = "Correll’s Obedient Plant";
   }
   let num = Plant.count((err, count) => {
     if (err) throw err;
     var newplant = new Plant({
       x: plant.x,
       y: plant.y,
-      color: getRandomColor(),
+      // color: getRandomColor(),
       plantType: name,
       created_at: new Date(),
-      height: 0,
+      // height: 0,
       spawned: true,
       code: count,
-      health: 1.0,
-      growthRate: 1.0,
-      waterStored: 0,
-      sunlight: 0.5,
-      water: 0.5,
-      drainage: 0.5,
+      // health: 1.0,
+      // growthRate: 1.0,
+      // waterStored: 0,
+      // sunlight: 0.5,
+      // water: 0.5,
+      // drainage: 0.5,
 
     });
     newplant.save(callback);

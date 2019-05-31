@@ -144,8 +144,7 @@ function spawn() {
     'x': sendx,
     'y': sendy
   };
-  console.log(url);
-  httpPost(url, postData,()=> { console.log("win?"); window.location.href = "/thanks"   }, ()=> { console.log(" didn't worked")});
+  httpPost(url, postData,()=> { console.log("spawned"); window.location.href = "/thanks"   }, ()=> { console.log("spawn failed")});
 
 }
 

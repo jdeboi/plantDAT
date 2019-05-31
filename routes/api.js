@@ -1,3 +1,5 @@
+let plantAgeSeconds = 3*60;
+
 var express = require('express');
 var router = express.Router();
 var moment = require('moment');
@@ -52,15 +54,17 @@ router.get('/allspawned', function(req, res, next) {
       let i = 0;
       plants = [];
       for(let plant of docs) {
-        let now = (Date.now());
-        let born = new Date(moment(plant.created_at).format("YYYY-MM-DD HH:mm"))
-        let diffHours = (now - born)/1000/60/60;
-        let roundedHours = diffHours.toFixed(2);
-        plants.push({
-          plant: plant,
-          age: roundedHours,
-          type: plantTypeJson[plant.name]
-        });
+
+        let born = moment(plant.created_at, "YYYY-mm-ddTHH:MM:ssZ");
+        let diff = moment().diff(born);
+        let seconds = diff/1000;
+        if (seconds < plantAgeSeconds) {
+          plants.push({
+            plant: plant,
+            age: seconds,
+            type: plantTypeJson[plant.name]
+          });
+        }
       }
       res.json(plants);
     }
