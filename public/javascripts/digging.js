@@ -1,4 +1,4 @@
-let ip = "192.168.1.100";
+let ip = "192.168.3.156";
 let ws;
 var x = 0, y = 0, sendx, sendy;
 let canvas;
@@ -6,9 +6,10 @@ let shovelImg;
 let arrow;
 let div;
 let plantName = "";
+let shovelC = 0;
 
 function preload() {
-  shovelImg = loadImage("../../images/shovel.png");
+  shovelImg = loadImage("../../images/shovel.svg");
   arrow = loadImage("../../images/arrow.png");
   div = select("#digdiv");
   plantName = select("#namediv").html();
@@ -16,8 +17,9 @@ function preload() {
 
 function setup() {
   canvas = createCanvas(div.width-2, div.height-2); //, WEBGL);
-  canvas.parent("digdiv")
+  canvas.parent("digdiv");
 
+  shovelC = floor(random(100));
   x = width/2;
   y = height/2;
   if (!"WebSocket" in window) {
@@ -52,18 +54,35 @@ function draw() {
 
   // translate(x-shovelImg.width*1.8, -shovelImg.height*.2, y-shovelImg.height*.7)
 
-  let factor = map(y, 0, height, .2, 1.0);
-  translate((x-shovelImg.width*.75*factor), y-shovelImg.height*.7*factor)
-  rotate(radians(-35));
+  let factor = map(y, 0, height, .1, .6);
+  let shovelW = shovelImg.width*factor;
+  let shovelH = shovelImg.height*factor;
+  translate((x-shovelW*.54), y-shovelH*.9)
+  // rotate(radians(-35));
 
+  fill(getShovelC());
 
-  image(shovelImg, 0, 0, shovelImg.width*factor, shovelImg.height*factor);
+  beginShape();
+  vertex(shovelW*.40, shovelH*.2);
+  vertex(shovelW*.58, shovelH*.2);
+  vertex(shovelW*.58, shovelH*.6);
+  vertex(shovelW*.40, shovelH*.6);
+  endShape();
+  image(shovelImg, 0, 0, shovelW, shovelH);
   // texture(shovelImg);
   // stroke(0);
   // plane(shovelImg.width, shovelImg.height);
   pop();
   // text(mouseX + " " + floor(mouseY), mouseX, mouseY);
 
+}
+
+function getShovelC() {
+  colorMode(HSB, 100);
+  // let colors = [color(255, 0, 0), color(255, 255, 0), color(0, 0, 255), color(0, 255, 255), color(255, 0, 255)];
+  let c = color(shovelC, 100, 100);
+  colorMode(RGB, 255);
+  return c; //colors[shovelC%colors.length];
 }
 
 function touchStarted() {
@@ -101,7 +120,7 @@ function touchEnded() {
 
 function sendXY() {
   if (inBounds()) {
-    let s = "T" + plantName + "X" + sendx + "Y" + sendy;
+    let s = "T" + shovelC + "X" + sendx + "Y" + sendy;
     if (ws.readyState === WebSocket.OPEN) ws.send(s);
   }
 }
@@ -119,7 +138,7 @@ function setXY() {
 
 function spawn() {
 
-  let url="http://localhost:5000/api/spawn";
+  let url="http://plantdat.com/api/spawn";
   let postData = {
     'short_name': plantName,
     'x': sendx,
