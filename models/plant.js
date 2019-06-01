@@ -27,7 +27,7 @@ var plantSchema = new mongoose.Schema({
 plantSchema.statics.create = function (plant, callback) {
   let name = "";
   if (plant.short_name == "beauty") {
-    name = "America Beautyberry";
+    name = "American Beautyberry";
   }
   else if (plant.short_name == "clasping") {
     name = "Clasping Cone Flower";
