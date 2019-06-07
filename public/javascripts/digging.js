@@ -1,4 +1,4 @@
-let ip = "172.20.10.2";
+let ip = "192.168.0.238";
 let ws;
 var x = 0, y = 0, sendx, sendy;
 let canvas;
