@@ -98,10 +98,10 @@ function touchStarted() {
 
 function touchMoved() {
   if (inBounds()) {
-    if (frameCount % 2 == 0) {
+    //if (frameCount % 2 == 0) {
       setXY();
       sendXY();
-    }
+    //}
     return false;
   }
 
