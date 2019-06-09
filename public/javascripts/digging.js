@@ -1,4 +1,4 @@
-let ip = "192.168.43.57";
+let ip = "192.168.0.238";
 let ws;
 var x = 0, y = 0, sendx, sendy;
 let canvas;
@@ -157,6 +157,8 @@ function createWebsocket() {
   ws.onopen = function() {
     // Web Socket is connected, send data using send()
     let s = "Opening Connection";
+    ws.send(s);
+    s = "T" + shovelC + "X" + sendx + "Y" + sendy;
     ws.send(s);
     // alert("Message is sent...");
   };
