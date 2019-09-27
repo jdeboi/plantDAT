@@ -1,7 +1,7 @@
 
 const PORT = process.env.PORT || 5000
-const dotenv = require('dotenv');
-dotenv.config();
+// const dotenv = require('dotenv');
+// dotenv.config();
 
 // not sure?
 var express = require('express');
