@@ -1,4 +1,5 @@
-let ip = "192.168.43.57.";
+let ip = "174.70.98.52";
+let port = 8888;
 let ws;
 var x = 0, y = 0, sendx, sendy;
 let canvas;
@@ -152,7 +153,7 @@ function spawn() {
 
 function createWebsocket() {
 
-  ws = new WebSocket("ws://" + ip +":8025/"); //172.17.15.216:8025/");
+  ws = new WebSocket("ws://" + ip +":" + port + "/"); //172.17.15.216:8025/");
 
   ws.onopen = function() {
     // Web Socket is connected, send data using send()
