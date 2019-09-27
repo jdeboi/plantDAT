@@ -1,3 +1,5 @@
+// https://discussions.apple.com/thread/3067232
+
 let ip = "174.70.98.52";
 let port = 8888;
 let ws;
@@ -153,7 +155,7 @@ function spawn() {
 
 function createWebsocket() {
 
-  ws = new WebSocket("ws://" + ip +":" + port + "/"); //172.17.15.216:8025/");
+  ws = new WebSocket("ws://" + ip +":" + port + "/api/plants"); //172.17.15.216:8025/");
 
   ws.onopen = function() {
     // Web Socket is connected, send data using send()
