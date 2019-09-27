@@ -13,7 +13,6 @@
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
-    "core-js": "^3.2.1",
     "debug": "~2.6.9",
     "express": "^4.15.2",
     "http-errors": "~1.6.3",
