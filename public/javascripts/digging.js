@@ -1,4 +1,4 @@
-let ip = "10.7.21.232";
+let ip = "129.81.187.81";
 let port = 8888;
 let ws;
 var x = 0, y = 0, sendx, sendy;
