@@ -149,7 +149,7 @@ function spawn() {
     'x': sendx,
     'y': sendy
   };
-  httpPost(url, postData,()=> { console.log("spawned"); window.location.href = "/"   }, ()=> { console.log("spawn failed")});
+  httpPost(url, postData,()=> { console.log("spawned"); window.location.href = "/api/plants"   }, ()=> { console.log("spawn failed")});
 
 }
 

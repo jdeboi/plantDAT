@@ -30,6 +30,26 @@ router.get('/dig/stokes', function(req, res, next) {
   res.render('digging', { title: 'Dig', plantType: plantTypeJson[4]  });
 });
 
+router.get('/dig/blueeye', function(req, res, next) {
+  res.render('digging', { title: 'Dig', plantType: plantTypeJson[5]  });
+});
+
+router.get('/dig/rose', function(req, res, next) {
+  res.render('digging', { title: 'Dig', plantType: plantTypeJson[6]  });
+});
+
+router.get('/dig/frog', function(req, res, next) {
+  res.render('digging', { title: 'Dig', plantType: plantTypeJson[7]  });
+});
+
+router.get('/dig/sleeping', function(req, res, next) {
+  res.render('digging', { title: 'Dig', plantType: plantTypeJson[8]  });
+});
+
+router.get('/dig/button', function(req, res, next) {
+  res.render('digging', { title: 'Dig', plantType: plantTypeJson[9]  });
+});
+
 router.post('/spawn', function(req, res, next) {
   var plant = req.body;
   console.log("spawn new plant type: " + plant.short_name, plant.x, plant.y);
