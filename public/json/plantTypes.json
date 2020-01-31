@@ -33,5 +33,40 @@
     "latin_name": "Stokesia laevis",
     "bio": "This summer bloomer needs very little maintenance and sows itself easily. It enjoys the sun but is versatile and happy with a little shade. A great nectar source for pollinators and easily divides by root cuttings. This aster is happy to accept extra rainwater in sandy soils, and to grow densely in areas when left for several years.",
     "img_path": "stokes.png"
+  },
+  {
+    "name": "Blue-Eyed Grass",
+    "short_name": "blueeye",
+    "latin_name": "Sisyrinchium angustifolium",
+    "bio": "Not really a grass, this delicate little clumper is actually in the iris family and totally righteous when you take a close look. The tiny blue flowers are spectacular attractors of pollinators and provide nectar for bees, butterflies, small mammals, and even baby lizards! They look dainty but prefer poor soils, open spaces, and can be either moderately wet or moderately dry. Ever few years they appreciate being divided and spread out to avoid crowding.",
+    "img_path": "blue.png"
+  },
+  {
+    "name": "Rose Mallow",
+    "short_name": "rose",
+    "latin_name": "Hibiscus moscheutos",
+    "bio": "Real showy and real sweet, here is a native hibiscus. Can grow to 6’ tall in full sun and form colonies from spreading seed. Giant flowers stay open for several weeks in late summer, calling in hummingbirds from a distance. An excellent choice for raingardens and swales because they need those saturated soils; they even hangout in salt marshes in south Louisiana.",
+    "img_path": "rose.png"
+  },
+  {
+    "name": "Frog Fruit",
+    "short_name": "frog",
+    "latin_name": "Phyla nodiflora",
+    "bio": "We proudly introduce a very exciting kind of groundcover. This perennial is low growing and will fill in bare understory areas gracefully. They tolerate shade and do well in poorly drained soils. Frogfruit doesn’t ask for much and will grow nearly anywhere, providing nectar for pollinators May through October. A great option for native lawn replacement projects, container gardens, or as an addition to pollinator patches. Can be an evergreen in warmer years but will go dormant in cold snaps.",
+    "img_path": "frog.png"
+  },
+  {
+    "name": "Sleeping Hibiscus",
+    "short_name": "sleeping",
+    "latin_name": "Malvaviscus arboreus var. drummondii",
+    "bio": "Here’s a shrub with sleepy little flowers that never fully open. They’re really great about making nectar AND fruit, which are happily eaten by birds and butterflies. They like a little shade and can take a lot of water, but prefer not to sit in it. Damp soils of all types will do just fine, and the cold won’t bother them too much. They play well with smaller plant friends that want to grow underneath.",
+    "img_path": "sleeping.png"
+  },
+  {
+    "name": "Buttonbush",
+    "short_name": "button",
+    "latin_name": "Cephalanthus occidentalis",
+    "bio": "A true wetland plant, this taller shrub is well suited for restoration projects along streams and in swamps. A stupendous water management worker, drinking up flood waters and holding soils together. It makes real cool round flower bunches that turn into seed clusters, attracting over 8 different types of birds and the twigs are eaten by 3 kinds of mammals. Thanks for the snacks, button-buddy!",
+    "img_path": "button.png"
   }
 ]
