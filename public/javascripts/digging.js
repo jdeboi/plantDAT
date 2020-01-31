@@ -1,8 +1,4 @@
-// git push -f heroku working:master
-// issue created with npm audit fix
-// maybe just merge these together
-let ip = "10.0.1.2.";
-// not sure about that last period
+let ip = "129.81.187.88";
 let port = 8888;
 let ws;
 var x = 0, y = 0, sendx, sendy;
