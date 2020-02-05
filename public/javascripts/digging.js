@@ -1,6 +1,6 @@
 // https://discussions.apple.com/thread/3067232
 //
-let ip = "129.81.187.109";
+let ip = "192.168.43.12";
 let port = 8888;
 let ws;
 var x = 0, y = 0, sendx, sendy;
